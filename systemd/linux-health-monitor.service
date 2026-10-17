@@ -1,0 +1,10 @@
+[Unit]
+Description=Linux Server Health Monitor
+After=network.target
+
+[Service]
+Type=oneshot
+# Replace USERNAME with the Linux account that owns this repository.
+User=USERNAME
+WorkingDirectory=/home/USERNAME/linux-server-health-monitor
+ExecStart=/home/USERNAME/linux-server-health-monitor/scripts/health-check.sh
